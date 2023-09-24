@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link href="/styles.css" rel="stylesheet" />
+    <script type="text/javascript" src="index.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNAMsFWX7qg8WLBusYFjuK8RRdrkErSv8&callback=console.debug&libraries=maps,marker&v=beta"
+    ></script>
+    <title>Hoffmann</title>
+  </head>
+  <body class="bg-white">
+    <nav
+      class="sticky top-0 px-4 py-4 flex justify-between items-center bg-white shadow-lg z-50"
+    >
+      <a class="text-xl font-bold leading-none" href="#">
+        <h1
+          class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400"
+        >
+          Hoffmann Physiotherapie
+        </h1>
+      </a>
+      <div class="lg:hidden">
+        <button
+          class="navbar-burger flex items-center text-blue-400 hover:text-blue-600 p-3"
+        >
+          <svg
+            class="block h-4 w-4 fill-current"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Mobile menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+          </svg>
+        </button>
+      </div>
+      <ul
+        class="hidden lg:mx-auto lg:flex lg:items-center lg:justify-between lg:w-auto lg:space-x-10"
+      >
+        <li>
+          <a class="text-md text-blue-400 hover:text-blue-600" href="#">Home</a>
+        </li>
+        <li class="text-blue-400">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="currentColor"
+            class="w-4 h-4 current-fill"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+            />
+          </svg>
+        </li>
+        <li>
+          <a class="text-md text-blue-400 hover:text-blue-600" href="#"
+            >About Us</a
+          >
+        </li>
+        <li class="text-blue-400">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="currentColor"
+            class="w-4 h-4 current-fill"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+            />
+          </svg>
+        </li>
+        <li>
+          <a class="text-md text-blue-400 hover:text-blue-600" href="#"
+            >Services</a
+          >
+        </li>
+        <li class="text-blue-400">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="currentColor"
+            class="w-4 h-4 current-fill"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+            />
+          </svg>
+        </li>
+        <li>
+          <a class="text-md text-blue-400 hover:text-blue-600" href="#"
+            >Pricing</a
+          >
+        </li>
+      </ul>
+      <a
+        class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-blue-50 text-md text-blue-400 hover:text-blue-600 rounded-xl transition duration-200"
+        href="#rafal"
+        >Contact</a
+      >
+    </nav>
+    <div class="navbar-menu hidden">
+      <div class="navbar-backdrop sticky inset-0 bg-blue-800 opacity-25"></div>
+      <nav
+        class="fixed z-50 top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto"
+      >
+        <div class="flex items-center mb-8">
+          <a class="mr-auto text-3xl font-bold leading-none" href="#">
+            <h2
+              class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400"
+            >
+              Hoffmann Physiotherapie
+            </h2>
+          </a>
+          <button class="navbar-close">
+            <svg
+              class="h-6 w-6 text-blue-400 hover:text-blue-600 cursor-pointer l"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div>
+          <ul>
+            <li class="mb-1">
+              <a
+                class="block p-4 text-sm font-semibold text-blue-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                href="#"
+                >Home</a
+              >
+            </li>
+            <li class="mb-1">
+              <a
+                class="block p-4 text-sm font-semibold text-blue-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                href="#"
+                >About Us</a
+              >
+            </li>
+            <li class="mb-1">
+              <a
+                class="block p-4 text-sm font-semibold text-blue-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                href="#"
+                >Services</a
+              >
+            </li>
+            <li class="mb-1">
+              <a
+                class="block p-4 text-sm font-semibold text-blue-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                href="#"
+                >Pricing</a
+              >
+            </li>
+            <li class="mb-1">
+              <a
+                class="block p-4 text-sm font-semibold text-blue-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                href="#"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="relative">
+      <div
+        class="w-full h-52 text-center p-16 bg-white text-blue-600 grid md:grid-cols-2 grid-col-1 lg:justify-items-start"
+      >
+        <img
+          class="p-1 bg-blue-600 m-1 rounded-full shadow-2xl lg:max-w-xs lg:ml-20"
+          src="/Rafał.jpg"
+          alt="Ja"
+        />
+        <h1 class="font-extrabold text-3xl mt-16 text-shadow">
+          Rafał Hoffmann<br /><span class="font-bold text-lg text-shadow"
+            >Je suis masseur-kinésithérapeute. Je suis également étudiante en
+            ostéopathie à l’Institut Supérieur d'Ostéopathie à Bézières. Dans sa
+            pratique, il utilise de nombreuses techniques combinées ainsi que la
+            médecine chinoise.</span
+          >
+        </h1>
+      </div>
+      <!-- Swiper -->
+      <div class="bg-gradient-to-r from-blue-600 to-blue-400 shadow-xl">
+        <div class="swiper mySwiper lg:w-[50%] shadow-2xl">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img class="" src="/zdjecie1.jpg" alt="zdjecie" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/zdjecie2.jpg" alt="zdjecie" />
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div
+        class="grid xl:grid-cols-2 grid-cols-1 2xl:grid-cols-3 bg-white p-10 mt-10 md:ml-32"
+      >
+        <div
+          id="rafal"
+          class="shadow-2xl m-5 md:ml-28 lg:ml-32 flex flex-col items-center bg-gradient-to-r from-blue-600 to-blue-400 border-2 border-gray-200 rounded-lg md:flex-row md:max-w-xl"
+        >
+          <img
+            class="shadow-2xl md:ml-2 bg-white p-1 object-cover rounded-full h-52 md:h-auto md:w-48"
+            src="/Rafał.jpg"
+            alt=""
+          />
+
+          <div class="flex flex-col justify-between p-4 leading-normal">
+            <h5
+              class="mb-2 text-center md:text-left text-2xl font-bold tracking-tight text-white text-shadow"
+            >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea,
+              exercitationem aliquid. Perferendis reiciendis, enim, sunt magni
+              accusantium ratione molestias, soluta est necessitatibus minus
+              quos quisquam odit tempore animi. A, natus?
+            </h5>
+          </div>
+        </div>
+        <div
+          id=""
+          class="shadow-2xl m-5 md:ml-28 lg:ml-32 flex flex-col items-center bg-gradient-to-r from-blue-600 to-blue-400 border-2 border-gray-200 rounded-lg md:flex-row md:max-w-xl"
+        >
+          <img
+            class="shadow-2xl md:ml-2 bg-white p-1 object-cover rounded-full h-96 md:h-auto md:w-48"
+            src="/Rafał.jpg"
+            alt=""
+          />
+          <div class="flex flex-col justify-between p-4 leading-normal">
+            <h5
+              class="mb-2 text-center md:text-left text-2xl font-bold tracking-tight text-white text-shadow"
+            >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea,
+              exercitationem aliquid. Perferendis reiciendis, enim, sunt magni
+              accusantium ratione molestias, soluta est necessitatibus minus
+              quos quisquam odit tempore animi. A, natus?
+            </h5>
+          </div>
+        </div>
+        <div
+          id=""
+          class="shadow-2xl m-5 md:ml-28 lg:ml-32 flex flex-col items-center bg-gradient-to-r from-blue-600 to-blue-400 border-2 border-gray-200 rounded-lg md:flex-row md:max-w-xl"
+        >
+          <img
+            class="shadow-2xl md:ml-2 bg-white p-1 object-cover rounded-full h-96 md:h-auto md:w-48"
+            src="/Rafał.jpg"
+            alt=""
+          />
+          <div class="flex flex-col justify-between p-4 leading-normal">
+            <h5
+              class="mb-2 text-center md:text-left text-2xl font-bold tracking-tight text-white text-shadow"
+            >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea,
+              exercitationem aliquid. Perferendis reiciendis, enim, sunt magni
+              accusantium ratione molestias, soluta est necessitatibus minus
+              quos quisquam odit tempore animi. A, natus?
+            </h5>
+          </div>
+        </div>
+        <div
+          id=""
+          class="shadow-2xl m-5 md:ml-28 lg:ml-32 flex flex-col items-center bg-gradient-to-r from-blue-600 to-blue-400 border-2 border-gray-200 rounded-lg md:flex-row md:max-w-xl"
+        >
+          <img
+            class="shadow-2xl md:ml-2 bg-white p-1 object-cover rounded-full h-96 md:h-auto md:w-48"
+            src="/Rafał.jpg"
+            alt=""
+          />
+          <div class="flex flex-col justify-between p-4 leading-normal">
+            <h5
+              class="mb-2 text-center md:text-left text-2xl font-bold tracking-tight text-white text-shadow"
+            >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea,
+              exercitationem aliquid. Perferendis reiciendis, enim, sunt magni
+              accusantium ratione molestias, soluta est necessitatibus minus
+              quos quisquam odit tempore animi. A, natus?
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col xl:flex-row bg-gradient-to-r from-blue-600 to-blue-400 mt-10 py-5"
+      >
+        <div class="map ml-32 mr-20 h-40 bg-white rounded-xl p-1">
+          <gmp-map
+            center="46.260406494140625,6.114713668823242"
+            zoom="14"
+            map-id="DEMO_MAP_ID"
+          >
+            <gmp-advanced-marker
+              position="46.260406494140625,6.114713668823242"
+              title="My location"
+            >
+            </gmp-advanced-marker>
+          </gmp-map>
+        </div>
+        <div class="flex flex-row xl:mt-10 ml-32 xl:ml-4 text-center">
+          <div class="m-5 xl:mt-5 xl:mr-1">
+            <img
+              src="/location.png"
+              alt="location"
+              width="32px"
+              height="32px"
+            />
+          </div>
+          <div class="">
+            <h5 class="xl:mt-4 text-center mt-4 text-white font-semibold">
+              <a href="https://goo.gl/maps/2rX6tCTmDqsDHN3m9">
+                13A Chemin du Levant <br />01210 Ferney-Voltaire<br />
+              </a>
+            </h5>
+          </div>
+          <div class="m-5 xl:mt-5 xl:mr-1">
+            <img src="/phone.png" alt="phone" width="32px" height="32px" />
+          </div>
+          <h5 class="xl:mt-4 text-center mt-4 text-white font-semibold">
+            Numéro de téléphone: <br /><a href="tel:+48661695415" alt="tele"
+              >661695415</a
+            >
+          </h5>
+          <div class="m-5 xl:mt-5 xl:mr-1">
+            <img src="/mail.png" alt="mail" width="32px" height="32px" />
+          </div>
+          <h5 class="xl:mt-4 text-center mt-4 text-white font-semibold">
+            e-mail: <br /><a href="mailto:jarek1991urban@gmail.com" alt="e-mail"
+              >Mail</a
+            >
+          </h5>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex justify-center items-center bg-gradient-to-r from-blue-600 to-blue-400"
+    >
+      <div class="rounded-lg text-center bg-white p-6 shadow-2xl w-1/2 m-5">
+        <form method="post">
+          <div class="relative mb-6">
+            <label class="m-2 text-sm font-medium" for="inputname">Name</label>
+            <input
+              type="text"
+              class="block text-center m-auto border border-blue-600 shadow-inner rounded-lg"
+              id="inputname"
+              placeholder="Name"
+            />
+            <label class="m-2 text-sm font-medium" for="inputmail"
+              >E-mail</label
+            >
+            <input
+              type="text"
+              class="block text-center m-auto border border-blue-600 shadow-inner rounded-lg"
+              id="inputmail"
+              placeholder="E-mail"
+            />
+            <div class="w-full min-w-[200px]">
+              <label class="block m-2 text-sm font-medium" for="massage"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                placeholder="Your message"
+                class="text-center resize rounded-lg w-full border border-blue-600 shadow-inner"
+                rows="5"
+              ></textarea>
+            </div>
+            <div class="relative">
+              <button
+                class="absolute right-0 top-0 text-center bg-gradient-to-r from-blue-600 to-blue-300 rounded-lg text-white w-20 h-6 hover:shadow-lg"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <script
+      id="ratufa_loader"
+      src="https://www.ratufa.io/c/ld.js?f=zbrx78tj&n=n1.ratufa.io"
+    ></script>
+  </body>
+</html>
