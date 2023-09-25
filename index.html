@@ -34,7 +34,7 @@
       </a>
       <div class="lg:hidden">
         <button
-          class="navbar-burger flex items-center text-blue-400 hover:text-blue-600 p-3"
+          class="navbar-burger flex items-center text-blue-600 hover:text-blue-400"
         >
           <svg
             class="block h-4 w-4 fill-current"
@@ -52,7 +52,7 @@
         <li>
           <a class="text-md text-blue-400 hover:text-blue-600" href="#">Home</a>
         </li>
-        <li class="text-blue-400">
+        <li class="text-blue-600">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -73,7 +73,7 @@
             >About Us</a
           >
         </li>
-        <li class="text-blue-400">
+        <li class="text-blue-600">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -94,7 +94,7 @@
             >Services</a
           >
         </li>
-        <li class="text-blue-400">
+        <li class="text-blue-600">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -117,13 +117,13 @@
         </li>
       </ul>
       <a
-        class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-blue-50 text-md text-blue-400 hover:text-blue-600 rounded-xl transition duration-200"
+        class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-blue-50 text-md text-blue-600 hover:text-blue-400 rounded-xl"
         href="#rafal"
         >Contact</a
       >
     </nav>
     <div class="navbar-menu hidden">
-      <div class="navbar-backdrop sticky inset-0 bg-blue-800 opacity-25"></div>
+      <div class="navbar-backdrop sticky inset-0 bg-blue-600 opacity-25"></div>
       <nav
         class="fixed z-50 top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto"
       >
@@ -137,7 +137,7 @@
           </a>
           <button class="navbar-close">
             <svg
-              class="h-6 w-6 text-blue-400 hover:text-blue-600 cursor-pointer l"
+              class="h-6 w-6 text-blue-400 hover:text-blue-600 cursor-pointer animate-bounce"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -364,19 +364,25 @@
       </div>
     </div>
     <div
-      class="flex justify-center items-center bg-gradient-to-r from-blue-600 to-blue-400"
+      class="flex justify-center items-center bg-gradient-to-r from-blue-600 to-blue-400 shadow-lg"
     >
       <div class="rounded-lg text-center bg-white p-6 shadow-2xl w-1/2 m-5">
         <form method="post">
           <div class="relative mb-6">
-            <label class="m-2 text-sm font-medium" for="inputname">Name</label>
+            <label
+              class="m-2 text-sm text-blue-600 text-shadow font-bold"
+              for="inputname"
+              >Name</label
+            >
             <input
               type="text"
               class="block text-center m-auto border border-blue-600 shadow-inner rounded-lg"
               id="inputname"
               placeholder="Name"
             />
-            <label class="m-2 text-sm font-medium" for="inputmail"
+            <label
+              class="m-2 text-sm font-bold text-shadow text-blue-600"
+              for="inputmail"
               >E-mail</label
             >
             <input
@@ -386,7 +392,9 @@
               placeholder="E-mail"
             />
             <div class="w-full min-w-[200px]">
-              <label class="block m-2 text-sm font-medium" for="massage"
+              <label
+                class="block m-2 text-sm font-bold text-shadow text-blue-600"
+                for="massage"
                 >Message</label
               >
               <textarea
@@ -406,6 +414,11 @@
           </div>
         </form>
       </div>
+    </div>
+    <div class="flex relative h-10 items-center justify-center">
+      <footer class="font-bold text-blue-600 text-shadow">
+        Developed By Jarek Urban
+      </footer>
     </div>
     <script>
       var swiper = new Swiper(".mySwiper", {
