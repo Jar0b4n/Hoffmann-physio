@@ -19,11 +19,15 @@
       async
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNAMsFWX7qg8WLBusYFjuK8RRdrkErSv8&callback=console.debug&libraries=maps,marker&v=beta"
     ></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Hoffmann</title>
   </head>
   <body class="bg-white">
     <nav
       class="sticky top-0 px-4 py-4 flex justify-between items-center bg-white shadow-lg z-50"
+      data-aos="fade-down"
+      data-aos-duration="1500"
+      data-aos-easing="ease-in-sine"
     >
       <a class="text-xl font-bold leading-none" href="#">
         <h1
@@ -196,6 +200,9 @@
     <div class="relative">
       <div
         class="w-full h-52 text-center p-16 bg-white text-blue-600 grid md:grid-cols-2 grid-col-1 lg:justify-items-start"
+        data-aos="fade-right"
+        data-aos-duration="1500"
+        data-aos-easing="ease-in-sine"
       >
         <img
           class="p-1 bg-blue-600 m-1 rounded-full shadow-2xl lg:max-w-xs lg:ml-20"
@@ -213,7 +220,12 @@
       </div>
       <!-- Swiper -->
       <div class="bg-gradient-to-r from-blue-600 to-blue-400 shadow-xl">
-        <div class="swiper mySwiper lg:w-[50%] shadow-2xl">
+        <div
+          class="swiper mySwiper lg:w-[50%] shadow-2xl"
+          data-aos="fade-left"
+          data-aos-duration="1500"
+          data-aos-easing="ease-in-sine"
+        >
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <img class="" src="/zdjecie1.jpg" alt="zdjecie" />
@@ -233,6 +245,9 @@
         <div
           id="rafal"
           class="shadow-2xl m-5 md:ml-28 lg:ml-32 flex flex-col items-center bg-gradient-to-r from-blue-600 to-blue-400 border-2 border-gray-200 rounded-lg md:flex-row md:max-w-xl"
+          data-aos="fade-right"
+          data-aos-duration="1500"
+          data-aos-easing="ease-in-sine"
         >
           <img
             class="shadow-2xl md:ml-2 bg-white p-1 object-cover rounded-full h-52 md:h-auto md:w-48"
@@ -254,6 +269,9 @@
         <div
           id=""
           class="shadow-2xl m-5 md:ml-28 lg:ml-32 flex flex-col items-center bg-gradient-to-r from-blue-600 to-blue-400 border-2 border-gray-200 rounded-lg md:flex-row md:max-w-xl"
+          data-aos="fade-left"
+          data-aos-duration="1500"
+          data-aos-easing="ease-in-sine"
         >
           <img
             class="shadow-2xl md:ml-2 bg-white p-1 object-cover rounded-full h-96 md:h-auto md:w-48"
@@ -274,6 +292,9 @@
         <div
           id=""
           class="shadow-2xl m-5 md:ml-28 lg:ml-32 flex flex-col items-center bg-gradient-to-r from-blue-600 to-blue-400 border-2 border-gray-200 rounded-lg md:flex-row md:max-w-xl"
+          data-aos="fade-right"
+          data-aos-duration="1500"
+          data-aos-easing="ease-in-sine"
         >
           <img
             class="shadow-2xl md:ml-2 bg-white p-1 object-cover rounded-full h-96 md:h-auto md:w-48"
@@ -294,6 +315,9 @@
         <div
           id=""
           class="shadow-2xl m-5 md:ml-28 lg:ml-32 flex flex-col items-center bg-gradient-to-r from-blue-600 to-blue-400 border-2 border-gray-200 rounded-lg md:flex-row md:max-w-xl"
+          data-aos="fade-left"
+          data-aos-duration="1500"
+          data-aos-easing="ease-in-sine"
         >
           <img
             class="shadow-2xl md:ml-2 bg-white p-1 object-cover rounded-full h-96 md:h-auto md:w-48"
@@ -312,61 +336,73 @@
           </div>
         </div>
       </div>
-      <div
-        class="flex flex-col xl:flex-row bg-gradient-to-r from-blue-600 to-blue-400 mt-10 py-5"
-      >
-        <div class="map ml-32 mr-20 h-40 bg-white rounded-xl p-1">
-          <gmp-map
-            center="46.260406494140625,6.114713668823242"
-            zoom="14"
-            map-id="DEMO_MAP_ID"
-          >
-            <gmp-advanced-marker
-              position="46.260406494140625,6.114713668823242"
-              title="My location"
+      <div class="bg-gradient-to-r from-blue-600 to-blue-400">
+        <div
+          class="flex flex-col xl:flex-row bg-gradient-to-r from-blue-600 to-blue-400 mt-10 py-5"
+          data-aos="fade-right"
+          data-aos-duration="1500"
+          data-aos-easing="ease-in-sine"
+        >
+          <div class="map ml-32 mr-20 h-40 bg-white rounded-xl p-1">
+            <gmp-map
+              center="46.260406494140625,6.114713668823242"
+              zoom="14"
+              map-id="DEMO_MAP_ID"
             >
-            </gmp-advanced-marker>
-          </gmp-map>
-        </div>
-        <div class="flex flex-row xl:mt-10 ml-32 xl:ml-4 text-center">
-          <div class="m-5 xl:mt-5 xl:mr-1">
-            <img
-              src="/location.png"
-              alt="location"
-              width="32px"
-              height="32px"
-            />
+              <gmp-advanced-marker
+                position="46.260406494140625,6.114713668823242"
+                title="My location"
+              >
+              </gmp-advanced-marker>
+            </gmp-map>
           </div>
-          <div class="">
+          <div class="flex flex-row xl:mt-10 ml-32 xl:ml-4 text-center">
+            <div class="m-5 xl:mt-5 xl:mr-1">
+              <img
+                src="/location.png"
+                alt="location"
+                width="32px"
+                height="32px"
+              />
+            </div>
+            <div class="">
+              <h5 class="xl:mt-4 text-center mt-4 text-white font-semibold">
+                <a href="https://goo.gl/maps/2rX6tCTmDqsDHN3m9">
+                  13A Chemin du Levant <br />01210 Ferney-Voltaire<br />
+                </a>
+              </h5>
+            </div>
+            <div class="m-5 xl:mt-5 xl:mr-1">
+              <img src="/phone.png" alt="phone" width="32px" height="32px" />
+            </div>
             <h5 class="xl:mt-4 text-center mt-4 text-white font-semibold">
-              <a href="https://goo.gl/maps/2rX6tCTmDqsDHN3m9">
-                13A Chemin du Levant <br />01210 Ferney-Voltaire<br />
-              </a>
+              Numéro de téléphone: <br /><a href="tel:+48661695415" alt="tele"
+                >661695415</a
+              >
+            </h5>
+            <div class="m-5 xl:mt-5 xl:mr-1">
+              <img src="/mail.png" alt="mail" width="32px" height="32px" />
+            </div>
+            <h5 class="xl:mt-4 text-center mt-4 text-white font-semibold">
+              e-mail: <br /><a
+                href="mailto:jarek1991urban@gmail.com"
+                alt="e-mail"
+                >Mail</a
+              >
             </h5>
           </div>
-          <div class="m-5 xl:mt-5 xl:mr-1">
-            <img src="/phone.png" alt="phone" width="32px" height="32px" />
-          </div>
-          <h5 class="xl:mt-4 text-center mt-4 text-white font-semibold">
-            Numéro de téléphone: <br /><a href="tel:+48661695415" alt="tele"
-              >661695415</a
-            >
-          </h5>
-          <div class="m-5 xl:mt-5 xl:mr-1">
-            <img src="/mail.png" alt="mail" width="32px" height="32px" />
-          </div>
-          <h5 class="xl:mt-4 text-center mt-4 text-white font-semibold">
-            e-mail: <br /><a href="mailto:jarek1991urban@gmail.com" alt="e-mail"
-              >Mail</a
-            >
-          </h5>
         </div>
       </div>
     </div>
     <div
       class="flex justify-center items-center bg-gradient-to-r from-blue-600 to-blue-400 shadow-lg"
     >
-      <div class="rounded-lg text-center bg-white p-6 shadow-2xl w-1/2 m-5">
+      <div
+        class="rounded-lg text-center bg-white p-6 shadow-2xl w-1/2 m-5"
+        data-aos="fade-left"
+        data-aos-duration="1500"
+        data-aos-easing="ease-in-sine"
+      >
         <form method="post">
           <div class="relative mb-6">
             <label
@@ -443,5 +479,9 @@
       id="ratufa_loader"
       src="https://www.ratufa.io/c/ld.js?f=zbrx78tj&n=n1.ratufa.io"
     ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
